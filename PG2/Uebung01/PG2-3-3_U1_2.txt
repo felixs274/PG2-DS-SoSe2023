@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double dArr[] = {17.5, 2e-3, -22.9, 88.5};
+
+    int i = 0;
+    for (auto& elem: dArr) {
+        i++;
+        cout << i << ". Zahl: " << elem << endl;
+    }
+}

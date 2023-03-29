@@ -1,0 +1,70 @@
+a) Es gibt kein ANSI C++
+
+b) Bjarne Stroustrup
+
+c) Aktuelle Version C++20, Aktuelle Vorabversion C++23
+
+d) C#, Java, Python
+
+e) 
+
+f) C++11
+
+g)  
+
+h) Beides fügt einen Zeilenumbruch ein, endl leer zusätzlich den cout puffer
+
+i) 
+
+j)
+
+k) -0,03004
+
+l) Unicode String
+
+m)
+#include <iostream>
+
+namespace my_namespace {
+    int x = 10;  // Variable im Namespace "pg2"
+}
+
+int main() {
+    std::cout << pg2::x << std::endl;
+
+    return 0;
+}
+
+n) 18
+
+o)
+#include <iostream>
+
+int main() {
+    double* a = new double(7.5); 
+    std::cout << "a = " << *a << std::endl;  
+    delete a;  
+
+    return 0;
+}
+
+p)
+#include <iostream>
+
+enum class Note : int {
+    one = 1,
+    two,
+    three,
+    four,
+    five
+};
+
+int main() {
+    Note my_note = Note::three;  // Eine Note mittels Aufzählungstyp zuweisen
+    int my_note_value = static_cast<int>(my_note);  // Die interne Wert der Note abrufen und in eine int-Variable speichern
+
+    std::cout << "Note: " << static_cast<int>(my_note) << std::endl;  // Ausgabe: "Note: 3"
+    std::cout << "Note value: " << my_note_value << std::endl;  // Ausgabe: "Note value: 3"
+
+    return 0;
+}

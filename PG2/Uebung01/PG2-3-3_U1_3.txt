@@ -1,0 +1,35 @@
+#include <iostream>
+
+struct Mix{
+    int n;
+    double d;
+    char c;
+};
+
+int main(){
+
+    // Aufgabe a)
+    Mix m1 = {27, 3.14, 'c'};   
+
+    // Aufgabe b)
+    int& n1 = m1.n;             
+    double& d1 = m1.d;
+    char& c1 = m1.c;
+    
+    // Aufgabe c)
+    Mix& m2 = m1;
+
+    // Aufgabe d)
+    n1++;
+    d1++;
+    c1++;
+    m2.n++;
+    m2.d++;
+    m2.c++;
+
+    // Aufgabe e)
+    std::cout << "m1.n = " << m1.n << " | m1.d = " << m1.d << " | m1.c = " << m1.c << std::endl;
+    std::cout << "n1 = " << n1 << " | d1 = " << d1 << " | c1 = " << c1 << std::endl;
+    std::cout << "m2.n = " << m2.n << " | m2.d = " << m2.d << " | m2.c = " << m2.c << std::endl;
+
+}

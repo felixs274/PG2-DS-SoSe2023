@@ -1,0 +1,43 @@
+i, I			change to insert mode
+ESC			change to normal mode
+v			change to visual mode
+:e			opens a file
+:w			save
+:q			quit
+:q!			quit without saving
+:help
+u			undo mistake
+ctrl + R		redo mistake
+h, j, k, l		move left, down, up, right
+w			moves to the start of next word
+b			moves to the beginning of the word
+e			moves to the end of the word
+(			move to previous sentence
+)			move to next sentence
+{			move to previous paragraph
+}			move to next paragraph
+f[char]			move to next given char in line
+F[char]			move to previous char in line
+0			move to start
+$			move to end of line
+gg			move to beginning of file
+G			move to end of file
+[n][action/movement]	do n times (3w)
+*			next same word
+#			previous same word
+x,X			remove a character
+r[char]			replaces character below cursor
+";" and ","		repeat last f or F
+"."			repeat previous command
+/yourtext and then:n, N	search for text
+d			delete command
+dd			delete a line of text
+dw			delete a word
+D			delete the end of line
+S			clear current line, to insert mode
+o, O			add new line
+%			goto corresponding parentheses
+a,A			append
+yy			copy current line
+yw			copy current word
+p			Paste copied text after cursor

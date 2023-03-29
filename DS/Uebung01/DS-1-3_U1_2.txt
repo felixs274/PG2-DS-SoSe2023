@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main() {
+    signed short int a = -25; 		//Bin: 11111111|11100111
+    signed short int b = 16; 		//Bin: 00000000|00010000
+    signed short int res = a + b;	//Bin: 11111111|11110111
+
+    std::cout << a << " + " << b << " = " << res << std::endl;
+
+    return 0;
+}

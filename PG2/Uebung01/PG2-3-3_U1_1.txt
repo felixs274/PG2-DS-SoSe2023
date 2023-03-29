@@ -6,17 +6,17 @@ c) Aktuelle Version C++20, Aktuelle Vorabversion C++23
 
 d) C#, Java, Python
 
-e) 
+e) Alles wird durch Objekte beschrieben
 
 f) C++11
 
-g)  
+g) std::cout , std::cin, std::cout
 
 h) Beides fügt einen Zeilenumbruch ein, endl leer zusätzlich den cout puffer
 
-i) 
+i) die funktion erwartet "nullptr" übergeben zu kommen
 
-j)
+j) int8_t
 
 k) -0,03004
 

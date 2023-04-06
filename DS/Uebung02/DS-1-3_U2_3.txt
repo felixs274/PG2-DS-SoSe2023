@@ -85,7 +85,7 @@ Die Begründung hierfür ist, dass der ursprüngliche Werte sich als 8 bit darst
 
 g)
 
-Z steht für zahl die abgezogen wird
+Z steht für Zahl die abgezogen wird
 Ü für übertrag
 
 (100)_10 / (15)_10
@@ -116,10 +116,28 @@ Z:     -0000
         ----
         1010
 
-=> Ergebnis ist 110 (Dezimal 6) mit rest 1010
+=> Ergebnis ist 110 (Dezimal 6) mit Rest 1010
 
 h)
+Probe durch remultiplizieren:
+Rest + (1111 * 0) + (1111 * 1 << 1) +  (1111 * 1 << 2)
 
+W steht für wert der letzten addition
+Z steht für zahl die addiert wird
+Ü steht für Übertrag
+E steht für das ergebnis des vorgangs
+
+W: 00001010
+Z: 00011110
+Ü:   1111
+E: 00101000
+
+W: 00101000
+Z: 00111100
+Ü:  111
+E: 01100100
+
+=> Ergebnis ist 01100100 was (100)_10 entspricht
 
 i)
 

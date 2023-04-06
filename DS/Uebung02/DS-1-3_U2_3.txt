@@ -80,9 +80,8 @@ e)
     Ergebnis: 11110010
 
 f)
-Ja, es wurde gesetzt. 
-Die ursprünglichen Werte lassen sich alle mit 8 bit darstellen, während die Summe 9 bit benötigt.
-
+Ja, es wurde gesetzt.
+Die Begründung hierfür ist, dass der ursprüngliche Werte sich als 8 bit darstellen ließ, aber die Summe 9 bit benötigt.
 
 g)
 

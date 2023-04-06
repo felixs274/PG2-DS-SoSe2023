@@ -1,14 +1,22 @@
 a)
 
-(32)_10 = 00100000
-Zweierkomplement: 11011111 + 1 = 11100000
-(-32)_10 = 11100000
+1. zuerst binär wert ermitteln:
+    binär signed:
+    (23)_10 = 00010111
 
-char = 1 byte
-unsigned short = 2 byte
-->  00000000|11100000
+    umwandlung in negativ:
+    original:   00010111
+    invertiert: 11101000
+    plus 1:     11101001
 
-(-32)_char = (224)_unsigned_short
+  bin: 11101001
+
+2. casten auf short (2 Bytes):
+  dort einfach die restlichen bytes mit 1 aufüllen
+  wert: 11111111|11101001
+
+  hex: 0xffe9
+  dec: 65513
 
 
 b)

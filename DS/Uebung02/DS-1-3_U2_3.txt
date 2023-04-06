@@ -85,6 +85,38 @@ Die Begründung hierfür ist, dass der ursprüngliche Werte sich als 8 bit darst
 
 g)
 
+Z steht für zahl die abgezogen wird
+Ü für übertrag
+
+(100)_10 / (15)_10
+
+    01100100 / 00001111 = 00110
+Z: -0000
+Ü: -0000
+    ----
+   =0110
+     1100
+Z:  -0000
+Ü:  -0000
+     ----
+    =1100
+     11001
+Z:  - 1111
+Ü:  -11100
+     -----
+    =01010
+      10100
+Z:   - 1111
+Ü:   -11110
+      -----
+     =00101
+        1010
+Z:     -0000
+Ü:     -0000
+        ----
+        1010
+
+=> Ergebnis ist 110 (Dezimal 6) mit rest 1010
 
 h)
 

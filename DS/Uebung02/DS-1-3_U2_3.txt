@@ -141,15 +141,31 @@ E: 01100100
 
 i)
 
-(A1B7)_16 = (10100001|10110111)_2
-(BBFF)_16 = (10111011|11111111)_2
+A1B7 + BBFF 
 
-    10100001|10110111       Zahl 1
-+   10111011|11111111       Zahl 2
-  1  1   111 1111111        Übertrag
--------------------------------------   
-  1|01011101|10110110
+W steht für orignaler wert
+Z steht für zahl die subtrahiert wird
+Ü steht für Übertrag
+E steht für das Ergebnis
 
-(00000001|01011101|10110110)_2 = (15DB6)_16
+W:  A1B7
+Z:  BBFF
+Ü: 1011
+E: 15DB6
 
+das ergebnis ist 0x15DB6
 
+j)
+BBFF - A1B7
+
+W steht für orignaler wert
+Z steht für zahl die subtrahiert wird
+Ü steht für Übertrag
+E steht für das ergebnis
+
+W: BBFF
+Z: A1B7
+Ü:   
+E: 1A48
+
+das ergebnis ist 0x1A48

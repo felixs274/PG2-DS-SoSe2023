@@ -1,9 +1,17 @@
+a)
+Die Ziffern vom Zahlensystem zur Basis 4 sind "0 1 2 3"
+
+b)
+umwandlung in hex zur Veranschaulichung:
 hex      A       1       5       7
 bin     1010    0001    0101    0111
 
+umwandlung in binär:
 (A157)_16 = (10100001|01010111)_2
 
+umwandlung von binär zu base4 system:
 bin     10 10 00 01 01 01 01 11
 base4   2  2  0  1  1  1  1  3
 
+daraus folgt:
 (A157)_16 = (22011113)_4

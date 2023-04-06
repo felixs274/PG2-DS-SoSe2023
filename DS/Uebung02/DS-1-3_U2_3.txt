@@ -67,15 +67,17 @@ e)
       1 0 0 0 0 0 1 1 0         Zwischenergebnis
 
 
-        1 0 0 0 0 0 1 1 0       Zwischenergebnis
-    +   0 1 1 1 0 1 1 0 0       Zahl 3
-                1 1             Übertrag
+      1 0 0 0 0 0 1 1 0         Zwischenergebnis
+    + 0 1 1 1 0 1 1 0 0         Zahl 3
+              1 1               Übertrag
     -------------------------------------
-        1 1 1 1 1 0 0 1 0       Ergebnis
+      1 1 1 1 1 0 0 1 0         Ergebnis
 
 
     01001001 + 10111101 + 11101100 = 00000001|11110010
 
+    Übertrag: 00000001
+    Ergebnis: 11110010
 
 f)
 Ja, es wurde gesetzt. 

@@ -31,13 +31,14 @@ x1 | x2 | x2 & x1 | x1 ^ A | ~B | ~x2 | (~B | ~x2) | ~(x1 ^ x2 & x1) | ~x2
 Die spezielle logische Verknüpfung ist eine Tautologie (immer wahr)
 
 c)
+  sizeof(!!5) ergibt 1, also ein byte => lösung wird in einen 8 bit wert gespeichert.
 
- !!5 ist ein boolscher Wert, deshalb 1 byte.
+ !!5 ist aber ein boolscher Wert, deshalb wird eigentlich nur 1 bit benötigt.
+ der Wert des Ergebnisses ist:
  5   == true
  !5  == false
  !!5 == true
  !!5 == 00000001
-
 
  d)
 

@@ -1,0 +1,65 @@
+#include <iostream>
+#include <iomanip>
+#include <limits>
+#include <sstream>
+
+using namespace std;
+string padCenter(string str, int len)
+{
+    int strsize = str.length();
+    int toPad = len - strsize;
+    if (toPad <= 0)
+    {
+        return str;
+    }
+
+    int leftpad = toPad / 2;
+    int rightpad = toPad - leftpad;
+
+    stringstream ret;
+    ret << setw(leftpad) << "";
+    ret << str;
+    ret << setw(rightpad) << "";
+    return ret.str();
+}
+
+int main()
+{
+    int cellWidth = 12;
+    int firstCell = 16;
+
+    cout << padCenter("data type", firstCell) << "|"
+         << padCenter("min value", cellWidth) << "|"
+         << padCenter("max value", cellWidth) << "|"
+         << padCenter("#Bytes", cellWidth) << endl;
+
+    cout << setfill('-') << setw(cellWidth*3+3 + firstCell) << "" << endl;
+    cout << setfill(' ') << left << setprecision(5);
+
+    
+    cout << setw(firstCell) << "char" << "|" 
+         << setw(cellWidth) << +numeric_limits<char>::min() << "|"
+         << setw(cellWidth) << +numeric_limits<char>::max() << "|"
+         << setw(cellWidth) << sizeof(char) << std::endl;
+
+    cout << setw(firstCell) << "unsigned char" << "|" 
+         << setw(cellWidth) << +numeric_limits<unsigned char>::min() << "|"
+         << setw(cellWidth) << +numeric_limits<unsigned char>::max() << "|"
+         << setw(cellWidth) << sizeof(unsigned char) << std::endl;
+
+    cout << setw(firstCell) << "int" << "|" 
+         << setw(cellWidth) << +numeric_limits<int>::min() << "|"
+         << setw(cellWidth) << +numeric_limits<int>::max() << "|"
+         << setw(cellWidth) << sizeof(int) << std::endl;
+
+    cout << setw(firstCell) << "float" << "|" 
+         << setw(cellWidth) << +numeric_limits<float>::min() << "|"
+         << setw(cellWidth) << +numeric_limits<float>::max() << "|"
+         << setw(cellWidth) << sizeof(float) << std::endl;
+
+    cout << setw(firstCell) << "double" << "|" 
+         << setw(cellWidth) << +numeric_limits<double>::min() << "|"
+         << setw(cellWidth) << +numeric_limits<double>::max() << "|"
+         << setw(cellWidth) << sizeof(double) << std::endl;
+    std::cout << std::endl;
+}

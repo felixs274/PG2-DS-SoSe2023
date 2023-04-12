@@ -1,15 +1,25 @@
-a)
+a) ostream
 
-b)
+b) cerr
 
-c)
+c) showpos
 
-d)
+d) Richtig
 
-e)
+e) showbase & hex
 
-f)
+f) getline()
 
 g)
+#include <iostream>
+#include <iomanip>
 
-h)
+int main() {
+    int num1 = 123;
+    int num2 = -456;
+    std::cout << std::internal << std::setw(8) << num1 << std::endl;
+    std::cout << std::internal << std::setw(8) << num2 << std::endl;
+    return 0;
+}
+
+h) quoted()

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <fstream>
+
+
+int main(){
+    std::ifstream made ("made.txt");
+    std::string line;
+    int number = 0;
+
+    while(std::getline(made, line))
+    {
+        //! skip empty lines
+        if (line == "")
+        {
+            continue;
+        }
+
+        //! skip author and title
+        if(line == "Die Made" || line == "Heinz Ehrhardt")
+        {
+            continue;
+        }
+
+        number++;
+        std::cout << number << ". " << line << std::endl; 
+    }
+
+    made.close();
+    return 0;
+}

@@ -183,9 +183,9 @@ E steht für das ergebnis
 W:  A1B7
 Z:  BBFF
 Ü: 1111 
-E: FE5B8
+E:  E5B8
 
-das ergebnis ist (FFFF|E5B8)_16
+das ergebnis ist (E5B8)_16
 
 hex   A    1    B    7
 bin  1010 0001 1011 0111

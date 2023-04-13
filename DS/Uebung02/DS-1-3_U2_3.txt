@@ -141,10 +141,10 @@ E: 01100100
 
 i)
 
-A1B7 + BBFF 
+(A1B7)_16 + (BBFF)_16 
 
 W steht für orignaler wert
-Z steht für zahl die subtrahiert wird
+Z steht für zahl die addiert wird
 Ü steht für Übertrag
 E steht für das Ergebnis
 
@@ -153,10 +153,11 @@ Z:  BBFF
 Ü: 1011
 E: 15DB6
 
-das ergebnis ist 0x15DB6
+das ergebnis ist (15DB6)_16
 
 j)
-BBFF - A1B7
+
+(BBFF)_16 - (A1B7)_16
 
 W steht für orignaler wert
 Z steht für zahl die subtrahiert wird
@@ -168,4 +169,46 @@ Z: A1B7
 Ü:   
 E: 1A48
 
-das ergebnis ist 0x1A48
+das ergebnis ist (1A48)_16
+
+k)
+
+(A1B7)_16 - (BBFF)_16
+
+W steht für orignaler wert
+Z steht für zahl die subtrahiert wird
+Ü steht für Übertrag
+E steht für das ergebnis
+
+W:  A1B7
+Z:  BBFF
+Ü: 1111 
+E: FE5B8
+
+das ergebnis ist (FFFF|E5B8)_16
+
+hex   A    1    B    7
+bin  1010 0001 1011 0111
+
+hex   B    B    F    F 
+bin  1011 1011 1111 1111
+
+W:      1010000110110111
+Z:      1011101111111111
+Ü:     1111111111111
+E:      1110010110111000
+
+das ergebnis ist (11100101|10111000)_2               
+  
+l)
+
+(8002)_16 * (23)_16
+
+    8002  *  23
+    -----------
+        10004
+      +  18006
+      --------
+        118046
+
+das ergebnis ist (118046)_16

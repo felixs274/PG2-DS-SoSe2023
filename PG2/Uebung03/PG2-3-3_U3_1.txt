@@ -1,0 +1,78 @@
+#include <iostream>
+#include <new>
+#include <array>
+#include <vector>
+
+
+typedef struct{
+    char c;
+    int n;
+    double d;
+} Mix;
+
+
+// ##### c) #####
+int * extractInts(std::vector<Mix> y){
+
+    int * p = new(std::nothrow) int[3];
+
+    for (int i = 0; i < 3; i++){
+        p[i] = y[i].n;
+    }
+
+    return p;
+}
+// ###############
+
+
+// ##### d) #####
+void printArray(const std::array<int, 3> & values){
+    for (const int & value : values){
+        std::cout << value << '\n';
+    }
+}
+// ###############
+
+
+int main(){
+
+    // ##### a) #####
+    Mix mix1, mix2, mix3;
+
+    mix1.c = 'a';
+    mix1.n = 1;
+    mix1.d = 3.14;
+
+    mix2.c = 'b';
+    mix2.n = 2;
+    mix2.d = 6.28;
+
+    mix3.c = 'c';
+    mix3.n = 3;
+    mix3.d = 9.81;
+
+    std::vector<Mix> v;
+    v.push_back(mix1);
+    v.push_back(mix2);
+    v.push_back(mix3);
+    // ###############
+
+
+    // ##### b) #####
+    int * cArr = extractInts(v);
+    // ###############
+
+
+    // ##### d) #####
+    std::array<int, 3> intStdArray; 
+
+    for (int i = 0; i < 3; i++){
+        intStdArray.at(i) = cArr[i];
+    }
+
+    printArray(intStdArray);
+    // ###############
+    
+    
+    return 0;
+}

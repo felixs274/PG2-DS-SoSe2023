@@ -9,16 +9,23 @@ outstring:
 main:
     pushq %rbp
 
-    xor %esi, %esi # clear register so we don't have leftover data.
+    # a)
+    # wert berechnen
+    xor %esi, %esi # esi bereinigen.
     movb $'A', %sil # 8 bit size
     subw $0454, %si # 16 bit size
     addl $0x12345678, %esi # 32 bit size
+
+    # b)
+    # esi auf rsi vergrößern unter beibehalten der signedness
     movslq %esi, %rsi
 
+    # c)
+    # wert ausgeben
     mov $outstring, %rdi
     call printf
 
-    mov $0, %rdi # return 0 as return value. We didn't xor to be more descriptive
-    call exit
+    popq %rbp
 
-    pop %rbp
+    mov $0, %rax
+    ret

@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        //! source https://github.com/newtonsart/vscode-assembly/blob/master/.vscode/launch.json
+        {
+            "type": "gdb",
+            "request": "launch",
+            "name": "debug GAS32",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "stopOnEntry": false,
+            "preLaunchTask": "gas32"
+        },
+        {
+            "type": "gdb",
+            "request": "launch",
+            "name": "debug GAS64",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "stopOnEntry": false,
+            "preLaunchTask": "gas64"
+        },
+        {
+        "type": "gdb",
+        "request": "launch",
+        "name": "debug GAS64-gcc",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
+        "stopOnEntry": false,
+        "preLaunchTask": "gas64-gcc"
+        },
+        {
+            "type": "by-gdb",
+            "request": "launch",
+            "name": "Launch(gdb)",
+            //"program": "${fileBasenameNoExtension}",
+            "program": "/mnt/c/Users/siriu/repos/studium/PG2-DS-SoSe2023/DS/Uebung04/DS-1-3_U4_1",
+            "cwd": "${workspaceRoot}"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+          "label": "gas64",
+          "type": "shell",
+//          "command": "rawfilename=${fileDirname}/${fileBasenameNoExtension}; as --32 --gstabs+ ${file} -o $rawfilename.o; ld -m elf_i386 $rawfilename.o -o $rawfilename",
+          "command": "rawfilename=${fileDirname}/${fileBasenameNoExtension}; as --64 --gstabs+ ${file} -o $rawfilename.o; ld -m elf_x86_64 $rawfilename.o -o $rawfilename",
+          "problemMatcher": {
+              "pattern": {
+                "regexp": "error"
+              }
+            },
+          "presentation": {
+              "focus": true,
+              "panel": "dedicated",
+              "reveal": "silent",
+              "clear": true
+          }
+        },
+        {
+          "label": "gas32",
+          "type": "shell",
+          "command": "rawfilename=${fileDirname}/${fileBasenameNoExtension}; as --32 --gstabs+ ${file} -o $rawfilename.o; ld -m elf_i386 $rawfilename.o -o $rawfilename",
+          "problemMatcher": {
+              "pattern": {
+                "regexp": "error"
+              }
+            },
+          "presentation": {
+              "focus": true,
+              "panel": "dedicated",
+              "reveal": "silent",
+              "clear": true
+          }
+        },
+        {
+        "label": "gas64-gcc",
+        "type": "shell",
+        //"command": "rawfilename=${fileDirname}/${fileBasenameNoExtension}; as --64 --gstabs+ ${file} -o $rawfilename.o; gcc -g -m64  $file -o $rawfilename",
+        "command": "rawfilename=${fileDirname}/${fileBasenameNoExtension}; gcc -no-pie -g -m64 ${file} -o $rawfilename",
+        "problemMatcher": {
+            "pattern": {
+              "regexp": "error"
+            }
+          },
+        "presentation": {
+            "focus": true,
+            "panel": "dedicated",
+            "reveal": "silent",
+            "clear": true
+        }
+      },
+    ]
+}

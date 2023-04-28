@@ -20,12 +20,12 @@ main:
     # create bitmask for upper bytes
     # remove lower 32 bit from rax
     # write new eax value with or
-    movq  $1, %rbx
-    salq $32, %rbx
-    subq $1, %rbx
-    salq $32, %rbx
-    andq %rbx, %rax
-    orq     $50000000, %rax
+    movq  $1, %rbx          # set first bit og rbx tp 1
+    salq $32, %rbx          # shift left by 32 bits so the 33rd bit is set to 1
+    subq $1, %rbx           # substract 1 so the first 32 bits are all set to 1 
+    salq $32, %rbx          # shift left by 32 bits so the first half is set to 0 and the second half to 1
+    andq %rbx, %rax         # and operator with rbx and rax. So the last 32 bits of rax are saved
+    orq $50000000, %rax     # or operator with rax and 50000000. So 50000000 is in eax
 
     movw       $50000, %ax
     movb          $50, %al
@@ -37,7 +37,7 @@ main:
     mov %rbx, %rsi
     call printf
 
-    mov $hexstr , %rdi
+    mov $hexstr, %rdi
     mov %rbx, %rsi
     call printf 
 

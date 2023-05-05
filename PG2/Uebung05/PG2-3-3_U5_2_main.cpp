@@ -1,5 +1,6 @@
 #include "person.h"
 #include <vector>
+
 int main(){
      std::vector<struct PStruct> v;
 
@@ -21,6 +22,8 @@ int main(){
      {
           std::cout << p << std::endl;
      }
+
+     delete p3;
 
      return 0;
 }

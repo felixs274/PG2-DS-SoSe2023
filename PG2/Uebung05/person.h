@@ -10,7 +10,7 @@ struct PStruct{
     EyeColor e_;
     double h_;
     bool g_; // gender 0 = male, 1 = female
-    std::ostream & print(std::ostream &);
+    std::ostream& print(std::ostream&);
 };
 
 std::ostream & operator <<(std::ostream &, PStruct &);

@@ -1,5 +1,6 @@
 #include "person.h"
 #include <vector>
+#include <system_error>
 
 int main(){
      std::vector<struct PStruct> v;
@@ -9,6 +10,11 @@ int main(){
      struct PStruct p2 = {};
      
      struct PStruct* p3 = new struct PStruct;
+     
+     if(p3 == nullptr)
+     {
+          return static_cast<int>(std::errc::not_enough_memory);
+     }
      p3->s_ = "Smith";
      p3->e_ = EyeColor::Green;
      p3->h_ = 1.78;

@@ -6,11 +6,9 @@ signum:
     movq %rdi, %rsi
     movq $0, %rdi
     cmpq %rdi, %rsi
-    je zero # jum to zero if zero flag is set
-    # cmpq %rdi, %rsi
     js negative # jump to negative if number is negative
-    jne positive # jump to positive if number is positive
-    # cmpq %rdi, %rsi
+    je zero # jum to zero if zero flag is set
+    # if we dont jump the value is positive and we go into the positive label 
     
     positive:
         mov $1, %rax

@@ -8,10 +8,10 @@ signum:
     cmpq %rdi, %rsi
     je zero # jum to zero if zero flag is set
     # cmpq %rdi, %rsi
+    js negative # jump to negative if number is negative
     jne positive # jump to positive if number is positive
     # cmpq %rdi, %rsi
-    js negative # jump to negative if number is negative
-
+    
     positive:
         mov $1, %rax
         ret

@@ -1,6 +1,6 @@
-1. Den Wert 1 um die größe eines Integers in Bits minus 1 left shiften
+1. Den Wert 1 um die größe eines Integers in Bits minus 1 left shiften, um das most significant Bit auf 1 zu setzen 
 
-2. Als Counter Variable für die Schleifen in den einzelnen cases
+2. Als Counter Variable und Index des akutellen Bit für die Schleifen in den einzelnen cases
 
 3. Die Beiden Datentypen haben die selbe Größe
 
@@ -20,4 +20,5 @@
    Wenn der aktuelle Bit ein Vielfaches von 23 oder 31 ist, wird zusätzlich ein "|" geprinted.
 
 10. Die Funktion wird benötigt, um das Terminal zu clearen. 
-    Unter Windows wird der Befehl "cls" aufgerufen, unter Unix ähnlichen Systemen der Befehl "clear"
+    Unter Windows wird der Befehl "cls" aufgerufen, unter Unix ähnlichen Systemen der Befehl "clear".
+    Die Funktion wird nach jedem Durchlauf aufgerufen um den Effekt eines Fullscreen zu erzeugen.

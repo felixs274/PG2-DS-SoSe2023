@@ -1,0 +1,23 @@
+1. Den Wert 1 um die größe eines Integers in Bits minus 1 left shiften
+
+2. Als Counter Variable für die Schleifen in den einzelnen cases
+
+3. Die Beiden Datentypen haben die selbe Größe
+
+4. Konvertiert den Input des users zu einem long int
+
+5. Die Schleife looped durch die Anzahl der Bits eines Integers. Bei jedem durchlauf wird i um 1 nach rechts geshifted. 
+   Es wird eine "1" geprinted, wenn i & ui an der aktuellen stelle 1 sind. Wenn nicht, wird eine "0" geprinted.
+   Wenn der aktuelle Bit ein Vielfaches von 8 ist, wird zusätzlich ein "|" geprinted.
+6. Konvertiert den Input des users zu einem long long int
+
+7. Die Adresse der Variable "f" wird zu einem unsigned int pointer gecastet und in die Variable "pi" geschrieben
+
+8. Weil "i" ein Integers ist, welcher die selbe Größe wie der unsigned int "pi" hat
+
+9. Die Schleife looped durch die Anzahl der Bits eines Integers. Bei jedem durchlauf wird i um 1 nach rechts geshifted.
+   Es wird eine "1" geprinted, wenn i & pi an der aktuellen stelle 1 sind. Wenn nicht, wird eine "0" geprinted.
+   Wenn der aktuelle Bit ein Vielfaches von 23 oder 31 ist, wird zusätzlich ein "|" geprinted.
+
+10. Die Funktion wird benötigt, um das Terminal zu clearen. 
+    Unter Windows wird der Befehl "cls" aufgerufen, unter Unix ähnlichen Systemen der Befehl "clear"

@@ -1,0 +1,1 @@
+Das Programm lässt den User Zahlen in verschiedene Datentypen in Dezimal eingeben und gibt die Binäre Form aus.

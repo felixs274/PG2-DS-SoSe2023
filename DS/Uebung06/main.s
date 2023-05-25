@@ -22,6 +22,16 @@ divide:
 
 
 # Hier die Sprungtabelle einfügen
+# jump table
+.align 8
+.s_table:
+    .quad .case_times # 0x2a
+    .quad .case_plus # 0x2b
+    .quad .case_default # 0x2c
+    .quad .case_default # 0x
+    .quad .case_2_4
+    .quad .case_def
+    .quad .case_2_4
 
 
 .section .bss
@@ -56,7 +66,26 @@ loop:
     # read \n
     call getchar
     # Hier switch und den Rest der Schleife einfügen
+
     # loop - end
+
+    movq $printChoice, %rdi
+    call printf
+
+    movq $scanfLetter, %rdi
+    movq $choice, %rsi
+    call scanf
+
+    # read \n
+    call getchar
+    movq %rax, %rdi
+    movq %rax, %r8
+    call putchar
+
+before_shit:
+    cmpq $'y', %r8
+    je loop
+
     # end
     movq $0, %rax
     popq %rbp

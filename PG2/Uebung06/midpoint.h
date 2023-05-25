@@ -20,9 +20,9 @@ class Midpoint {
     Point p2_;
     public:
         Midpoint(Point, Point);
-    Point getMidpoint();
-    // prints coordinates of center
-    friend std::ostream & operator << (std::ostream & , Midpoint & );
+        Point getMidpoint();
+        // prints coordinates of center
+        friend std::ostream & operator << (std::ostream & , Midpoint & );
 };
 
 class Distance {
@@ -30,8 +30,8 @@ class Distance {
     Midpoint m2_;
     public:
         Distance(Midpoint, Midpoint);
-    double getDistance();
-    std::ostream & print(std::ostream & );
+        double getDistance();
+        std::ostream & print(std::ostream & );
 };
 
 std::ostream & operator << (std::ostream & , Distance & );

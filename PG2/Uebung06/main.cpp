@@ -10,7 +10,7 @@ int main() {
 
     typedef Point P;
 
-    array < array < Point, 4 > , 10 > arr = {
+    array<array<Point, 4>, 10> arr = {
         {
             {
                 {
@@ -46,8 +46,7 @@ int main() {
                 }
             }, {
                 {
-                    P(10.0, -19.4), P(-33.6, -25.3, 28.7), P(24.4, 48.6), \
-                        P(20.7, -48.6)
+                    P(10.0, -19.4), P(-33.6, -25.3, 28.7), P(24.4, 48.6), P(20.7, -48.6)
                 }
             }, {
                 {
@@ -65,14 +64,10 @@ int main() {
         Point & D = line[3];
         Midpoint m2(C, D);
         Distance d(m1, m2);
-        cout << "\nMidpoint AB: "\ <<
-            "(" << A << "), (" << B << ") = "\ <<
-            m1 << endl;
-        cout << "Midpoint CD: "\ <<
-            "(" << C << "), (" << D << ") = "\ <<
-            m2 << endl;
+        cout << "\nMidpoint AB: " << "(" << A << "), (" << B << ") = " << m1 << endl;
+        cout << "Midpoint CD: " << "(" << C << "), (" << D << ") = " << m2 << endl;
         cout << "Distance(Midpoint AB, Midpoint CD): " << d << endl;
     }
-    
+
     return 0;
 }

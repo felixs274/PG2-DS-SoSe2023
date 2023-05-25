@@ -24,7 +24,11 @@ Point Midpoint::getMidpoint() {
     return Point(x, y, z);
 }
 
-
+std::ostream & operator <<(std::ostream & out, Midpoint & midpoint) {
+    Point center = midpoint.getMidpoint();
+    out << "(" << center.x_ << ", " << center.y_ << ", " << center.z_ << ")";
+    return out;
+}
 
 
 
@@ -41,9 +45,7 @@ double Distance::getDistance() {
     return dist;
 }
 
-
-
 std::ostream & operator <<(std::ostream & out, Distance & dist) {
-    out << "(" << dist << ")";
+    out << dist.getDistance();
     return out;
 }

@@ -75,7 +75,7 @@ bs:
 
 .case_times:
     movl a, %ecx
-    imulq b, %ecx
+    imull b, %ecx
     movl b, %edx
     movl a, %esi  
     movq $times, %rdi

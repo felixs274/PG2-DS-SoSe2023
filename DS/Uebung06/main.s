@@ -24,14 +24,13 @@ divide:
 # Hier die Sprungtabelle einfügen
 # jump table
 .align 8
-.s_table:
-    .quad .case_times # 0x2a
-    .quad .case_plus # 0x2b
-    .quad .case_default # 0x2c
-    .quad .case_default # 0x
-    .quad .case_2_4
-    .quad .case_def
-    .quad .case_2_4
+.switch_table:
+    .quad .case_times   # * : 0x2a
+    .quad .case_plus    # + : 0x2b
+    .quad .case_default #     0x2c
+    .quad .case_minus   # - : 0x2d
+    .quad .case_default #     0x2e
+    .quad .case_divided # / : 02f
 
 
 .section .bss
@@ -66,6 +65,24 @@ loop:
     # read \n
     call getchar
     # Hier switch und den Rest der Schleife einfügen
+bs:
+    movq $0, %rsi
+    movb op, %sil
+    subb $0x2a, %sil
+    cmpb $6, %sil
+    jae .switch_end
+    jmp *.switch_table(, %rsi, 8)
+
+.case_times:
+    jmp .switch_end
+.case_plus:
+    jmp .switch_end
+.case_minus:
+    jmp .switch_end
+.case_divided:
+    jmp .switch_end
+.case_default:
+.switch_end:
 
     # loop - end
 

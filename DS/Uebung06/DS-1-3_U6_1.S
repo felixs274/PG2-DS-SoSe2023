@@ -74,36 +74,42 @@ bs:
     jmp *.switch_table(, %rsi, 8)
 
 .case_times:
+    movl a, %ecx
+    imulq b, %ecx
+    movl b, %edx
+    movl a, %esi  
+    movq $times, %rdi
+    call printf
     jmp .switch_end
-.case_plus:
 
+.case_plus:
     movl a, %ecx 
     addl b, %ecx
-
     movl b, %edx
     movl a, %esi
     movq $plus, %rdi
     call printf
     jmp .switch_end
+
 .case_minus:
     movl a, %ecx 
     subl b, %ecx
-
     movl b, %edx
     movl a, %esi
     movq $minus, %rdi
     call printf
     jmp .switch_end
+
 .case_divided:
-
     movl a
-
     movl b, %edx
     movl a, %esi
     movq $divide, %rdi
     call printf
     jmp .switch_end
+
 .case_default:
+
 .switch_end:
 
     # loop - end

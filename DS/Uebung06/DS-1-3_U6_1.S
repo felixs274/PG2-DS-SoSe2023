@@ -101,7 +101,13 @@ bs:
     jmp .switch_end
 
 .case_divided:
-    movl a
+    movl a, %eax
+    movl $0, %edi
+    movl b, %ecx
+    div %ecx
+
+    movl %eax, %ecx
+
     movl b, %edx
     movl a, %esi
     movq $divide, %rdi

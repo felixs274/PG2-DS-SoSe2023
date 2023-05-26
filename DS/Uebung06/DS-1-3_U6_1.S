@@ -106,7 +106,6 @@ loop:
     divl %ecx
 
     movl %eax, %ecx
-
     movl b, %edx
     movl a, %esi
     movq $divide, %rdi
@@ -132,8 +131,7 @@ loop:
     movq %rax, %r8
     call putchar
 
-before_shit:
-    cmpq $'y', %r8
+    cmpq $'y', choice
     je loop
 
     # end

@@ -65,7 +65,6 @@ loop:
     # read \n
     call getchar
     # Hier switch und den Rest der Schleife einfügen
-bs:
     movq $0, %rsi
     movb op, %sil
     subb $0x2a, %sil
@@ -102,9 +101,9 @@ bs:
 
 .case_divided:
     movl a, %eax
-    movl $0, %edi
+    movl $0, %edx
     movl b, %ecx
-    div %ecx
+    divl %ecx
 
     movl %eax, %ecx
 

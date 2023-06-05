@@ -1,9 +1,12 @@
 .section .rodata
 charstr:
-    .ascii "%c"
+    .asciz "%c"
+
+emptyStr:
+    .asciz ""
 
 word:
-    .asciz "ABC"
+    .ascii "ABC"
 
 .section .text
 
@@ -16,25 +19,15 @@ printReverse:
     cmpq %rdx, %rdi
     je ret_reverse
 
-    #movq %rdi, %r12
     pushq %rsi
 
-    subq $1, %rdx
-    #movq %rdx, %r13
+    decq %rdx
     pushq %rdx
 
-#if 1
     movb (%rsi, %rdx), %sil
     movq $charstr, %rdi
     call printf
-#else
-    xorq %rsi, %rsi
-    movb (%rsi, %rdx), %sil
-    call putchar
-#endif
-    
-    # movq %r12, %rdi
-    # movq %r13, %rdx
+
     popq %rdx
     popq %rsi
 
@@ -54,6 +47,10 @@ main:
     movq $word, %rsi
     movq $3, %rdx
     call printReverse
+
+    movq $emptyStr, %rdi
+    call puts
+
     # end
     movq $0, %rax
     popq %rbp

@@ -1,4 +1,4 @@
-#include "ROT_struct.h"
+#include "ROT_Struct.h"
 
 int main() {
     UseStruct st1;

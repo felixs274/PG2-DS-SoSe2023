@@ -9,12 +9,10 @@ UseStruct::~UseStruct() {
     delete pSt_;
 }
 
-
 void UseStruct::setData(int n, double d) {
     pSt_->n = n;
     pSt_->d = d;
 }
-
 
 std::ostream& operator<<(std::ostream& out, const UseStruct& u) {
     out << "n = " << u.pSt_->n << ", d = " << u.pSt_->d << "\n";

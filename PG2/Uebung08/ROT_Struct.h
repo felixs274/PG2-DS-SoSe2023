@@ -13,12 +13,7 @@ class UseStruct {
         UseStruct();
         UseStruct(const UseStruct&);
         ~UseStruct();
-        UseStruct& operator=(const UseStruct& other) {
-            if (this != &other) {
-                *pSt_ = *other.pSt_;
-            }
-            return *this;
-        }
+        UseStruct& operator=(const UseStruct& other);
 
         void setData(int n, double d);
         friend std::ostream & operator <<(std::ostream &, const UseStruct & u);

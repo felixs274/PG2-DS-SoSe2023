@@ -87,10 +87,7 @@ main:
 
     movq $sumstr, %rdi
     movq $0, %rax
-    call printf
-
-
-    
+    call printf   
 
  
     ret

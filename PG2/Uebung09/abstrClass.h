@@ -5,14 +5,14 @@
 
 // Point
 typedef struct Point {
-    double x_ {};
-    double y_ {};
-}P;
+    double x_{};
+    double y_{};
+} P;
 
 // Figure
 class Figure {
     protected: 
-        P center_ {};
+        P center_{};
     public: 
         Figure(const P &);
         virtual ~Figure();
@@ -20,17 +20,17 @@ class Figure {
         virtual void print2(std::ostream &) const;
 };
 
-std::ostream & operator << (std::ostream & ,const Figure &);
+std::ostream & operator << (std::ostream &, const Figure &);
 
 // Line
-class Line: public Figure {
+class Line : public Figure {
     public:
         Line(const P &);
         virtual std::ostream & print1(std::ostream &) const override;
 };
 
 // Ellipse
-class Ellipse: public Figure {
+class Ellipse : public Figure {
     public: 
         Ellipse(const P &);
         virtual std::ostream & print1(std::ostream &) const override final;
